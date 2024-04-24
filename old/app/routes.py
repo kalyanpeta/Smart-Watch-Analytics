@@ -1,4 +1,4 @@
-from flask import request, jsonify, render_template
+from flask import request, jsonify
 from app import app
 from app.utils import load_model
 from app.recommendations import get_questions, get_recommendations
@@ -16,10 +16,6 @@ def categorize_sleep(score):
         return "The Toss-and-Turner"
     else:
         return "The All-Nighter"
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 @app.route('/predict/sleep_quality', methods=['POST'])
 def predict_sleep_quality():

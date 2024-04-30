@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Level Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6" id="stressDataSection">
+                <h1 class="text-center text-primary mt-5 mb-4">Stress Level Prediction Data</h1>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form id="stressLevelForm" class="form">
+                            <div class="form-group">
+                                <input type="number" id="recoveryScore" class="form-control" placeholder="Recovery score %" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="heartRateVariability" class="form-control" placeholder="Heart rate variability (ms)" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="restingHeartRate" class="form-control" placeholder="Resting heart rate (bpm)" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="bloodOxygen" class="form-control" placeholder="Blood oxygen %" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="remDuration" class="form-control" placeholder="REM duration (min)" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </form>
+                        <div id="stressResults" class="text-center mt-3"></div>
+                        <button id="takeStressQuizButton" class="btn btn-info btn-block mt-3" style="display:none;">Take the Stress Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="stressQuestionnaireSection" style="display:none;">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <h2 class="text-center text-secondary">Stress Lifestyle Questionnaire</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form id="stressQuestionnaireForm" class="form">
+                                <!-- Questions will be dynamically loaded here -->
+                            </form>
+                            <div id="stressRecommendation" class="text-center mt-3 text-success"></div>
+                            <button onclick="goBackStress()" class="btn btn-secondary btn-block mt-3">Go Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/scripts2.js"></script>
+</body>
+</html>

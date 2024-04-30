@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Quality and Recommendations</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6" id="sleepDataSection">
+                <h1 class="text-center text-primary mt-5 mb-4">Smart Watch Data Analytics</h1>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form id="sleepDataForm" class="form">
+                            <div class="form-group">
+                                <input type="number" id="totalMinutesAsleep" class="form-control" placeholder="Total Minutes Asleep" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="totalTimeInBed" class="form-control" placeholder="Total Time in Bed" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="minutesREM" class="form-control" placeholder="Minutes REM Sleep" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="minutesLightSleep" class="form-control" placeholder="Minutes Light Sleep" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </form>
+                        <div id="results" class="text-center mt-3"></div>
+                        <button id="takeQuizButton" class="btn btn-info btn-block mt-3" style="display:none;">Take the Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="questionnaireSection" style="display:none;">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <h2 class="text-center text-secondary">Lifestyle Questionnaire</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form id="questionnaireForm" class="form">
+                                <!-- Questions will be dynamically loaded here -->
+                            </form>
+                            <div id="recommendation" class="text-center mt-3 text-success"></div>
+                            <!-- <button onclick="goBack()" class="btn btn-secondary btn-block mt-3">Go Back</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

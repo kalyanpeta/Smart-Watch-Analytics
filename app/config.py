@@ -45,3 +45,40 @@ RECOMMENDATIONS = {
         "The All-Nighter": "Aim to gradually increase your sleep hours and stabilize your sleep schedule."
     }
 }
+
+STRESS_QUESTIONS = {
+    "Low": [
+        "Do you feel relaxed for most of the day?",
+        "Do you find it easy to unwind and relax when you have free time?",
+        "Do you engage in regular physical activity?",
+        "Do you feel that you manage stress well through hobbies or activities?",
+        "Are you able to disconnect from work-related thoughts during personal time?"
+    ],
+    "Medium": [
+        "Do you often feel pressures from work or home life?",
+        "Do you struggle to maintain a work-life balance?",
+        "Do you find it hard to concentrate because of your worries?",
+        "Do you sometimes skip meals or eat irregularly due to stress?",
+        "Do you feel fatigued even after resting or sleeping?"
+    ],
+    "High": [
+        "Do you often feel overwhelmed by your responsibilities?",
+        "Do you experience physical symptoms of stress such as headaches or muscle tension?",
+        "Is it difficult for you to relax even in a comfortable environment?",
+        "Do you feel anxious or agitated frequently?",
+        "Do you often feel that you cannot cope with all the demands of daily life?"
+    ]
+}
+
+STRESS_RECOMMENDATIONS = {
+    "yes": {
+        "Low": "Continue practicing good stress management techniques and maintain your balanced lifestyle.",
+        "Medium": "Consider adopting more relaxation techniques and possibly seek professional help if stress persists.",
+        "High": "It is crucial to seek strategies for stress reduction and professional counseling might be beneficial."
+    },
+    "no": {
+        "Low": "Keep up your excellent habits but remain aware of how stress affects you to prevent it from increasing.",
+        "Medium": "Try to incorporate more stress-reduction techniques into your daily routine and consider professional advice.",
+        "High": "Immediate action to reduce stress is important. Professional help or counseling is highly recommended."
+    }
+}
